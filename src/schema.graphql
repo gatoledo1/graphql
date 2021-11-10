@@ -1,0 +1,22 @@
+type Survivors {
+  id: ID!
+  name: String!
+  attribute: String
+  email: String
+  infectado: Boolean
+}
+
+type Query {
+  survivors: [Survivors!]!
+  survivor(id: ID): Survivors
+}
+
+input isInfected {
+  infectado: Boolean!
+}
+
+type Mutation {
+  CreateSurvivors(name: String!, attribute: String!, email: String!, infectado: Boolean!): Survivors
+  Infected(name: String!, input: isInfected): Survivors
+  RemoveSurvivors(id: ID!): Survivors
+}
