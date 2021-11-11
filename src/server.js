@@ -14,4 +14,6 @@ const server = new GraphQLServer({
   resolvers
 })
 
-server.start().then(console.log(">>>>>> 🚀 Server up!"))
+server.start((options) => {
+  console.log(`>>>>>> 🚀 Server up! http://localhost:${options.port}`)
+})

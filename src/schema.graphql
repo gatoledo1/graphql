@@ -1,6 +1,6 @@
 type Survivors {
   id: ID!
-  name: String!
+  name: String
   attribute: String
   email: String
   infectado: Boolean
@@ -8,7 +8,7 @@ type Survivors {
 
 type Query {
   survivors: [Survivors!]!
-  survivor(id: ID): Survivors
+  survivor(name: String): Survivors
 }
 
 input isInfected {
