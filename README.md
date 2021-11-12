@@ -1,5 +1,6 @@
 # <img width="24" src="https://symbols.getvecta.com/stencil_82/66_graphql-icon.0f3bf60db3.svg"> GraphQL
-- API trainning FinanZero
+
+
 
 ### Para começar, faça o clone do repositório
 -----------
