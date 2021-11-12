@@ -8,7 +8,9 @@ module.exports = {
 
   Mutation: {
     CreateSurvivors: (_, { name, attribute, email, infectado }) => Survivors.create({ name, attribute, email, infectado }),
-    Infected: (_, { id, input }) => Survivors.findOneAndUpdate({ id }, input, {new: true}),
+    
+    Infected: (_, { id, input }) => Survivors.findOneAndUpdate({ _id: id }, input, {new: true}),
+    
     RemoveSurvivors: (_, { id }) => Survivors.deleteOne({ _id: id }),
   }
 };

@@ -17,6 +17,6 @@ input isInfected {
 
 type Mutation {
   CreateSurvivors(name: String!, attribute: String!, email: String!, infectado: Boolean!): Survivors
-  Infected(name: String!, input: isInfected): Survivors
+  Infected(id: ID!, input: isInfected): Survivors
   RemoveSurvivors(id: ID!): Survivors
 }

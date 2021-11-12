@@ -14,6 +14,15 @@ const server = new GraphQLServer({
   resolvers
 })
 
+const corsOptions = {
+    origin: "http://localhost:3000",
+    credentials: true
+  };
+
+const options = {
+  cors: corsOptions
+};
+
 server.start((options) => {
   console.log(`>>>>>> 🚀 Server up! http://localhost:${options.port}`)
 })
